@@ -1,6 +1,6 @@
 export default function Home() {
 
-  const repeats = 300;
+  const repeats = 150;
   const itemsLookAtMe = Array.from({ length: repeats }).map((_, i) => (
     <div key={i} className="text-2xl font-bold marquee-item">Look at Me!</div>
   ));
