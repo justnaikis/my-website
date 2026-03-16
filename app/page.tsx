@@ -1,48 +1,36 @@
+import FacesChangingAnimation from "./components/facesChangingAnimation";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { MdOutlineMail } from "react-icons/md";
+
+
 export default function Home() {
-
-  const repeats = 50;
-  const itemsLookAtMe = Array.from({ length: repeats }).map((_, i) => (
-    <div key={i} className="text-2xl font-bold marquee-item">Look at Me!</div>
-  ));
-  const itemsAboutMe = Array.from({ length: repeats }).map((_, i) => (
-    <div key={i} className="text-2xl font-bold marquee-item">About Me!</div>
-  ));
-
   return (
     <div className="h-screen">
-      <h1>Welcome to the Home Page</h1>
-      <div className="flex justify-center items-center">
-
-        <div className="group relative h-25 w-full border-t-2 overflow-hidden">
-          <div className="absolute inset-0 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center">
-            <div className="marquee w-full">
-              <div className="marquee-track">
-                {itemsLookAtMe}
-              </div>
-            </div>
-          </div>
-          <div className="absolute inset-0 bg-black flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-full">
-            <div className="text-2xl font-bold">
-              Look at Me!
-            </div>
-          </div>
+      <div className="h-screen w-full flex">
+        <div className="w-1/2 flex items-center justify-center text-4xl font-bold bg-clip-text">
+        <div>
+          <div className="text-6xl mb-2">Vėjas Gecevičius</div>
+          <div className="text-4xl italic">Aero photographer</div>
+        </div>
+        </div>
+        <div className="w-1/2">
+          <FacesChangingAnimation />
         </div>
       </div>
-      <div className="flex justify-center items-center">
+      <div  className="w-full border-b-2 border border-gray-300"/>
+      <div className="justify-center flex text-6xl mt-8 font-bold italic">My Work</div>
+      <div className="h-screen p-12">
+        <div className=" bg-gray-200 h-full rounded-3xl">
 
-        <div className="group relative h-25 w-full border-t-2 overflow-hidden">
-          <div className="absolute inset-0 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center">
-            <div className="marquee w-full">
-              <div className="marquee-track">
-                {itemsAboutMe}
-              </div>
-            </div>
-          </div>
-          <div className="absolute inset-0 bg-black flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-full">
-            <div className="text-2xl font-bold">
-              About Me!
-            </div>
-          </div>
+        </div>
+      </div>
+      <div  className="w-full border-b-2 border border-gray-300"/>
+      <div className="p-8 flex items-center justify-center text-2xl font-bold">
+        <div>
+          <div className="flex justify-center text-6xl my-4">Contact Me</div>
+          <div className="flex justify-center h-10 items-center m-1 gap-3"><FaPhoneAlt className="h-9 w-9"/> +48 889 459 362</div>
+          <div className="flex justify-center h-10 items-center m-1 gap-3"><FaWhatsapp className="h-9 w-9"/> +370 648 43 441</div>
+          <div className="flex justify-center h-10 items-center m-1 gap-3"><MdOutlineMail className="h-9 w-9"/> geceviusvejas@gmail.com</div>
         </div>
       </div>
     </div>
